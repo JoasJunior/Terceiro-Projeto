@@ -34,7 +34,10 @@ body {
     margin: 30px;
     display: grid;
     grid-gap: 20px;
+    
     grid-template-areas: 
+    "item item item item item"
+    "item item item item item"
     "item item item item item"
     "item item item item item"
     "footer footer footer footer footer";
@@ -42,6 +45,10 @@ body {
 img{
     max-width: 100%;
     border-radius: 5px;
+    box-shadow: 1px 1px 10px black;
+}
+img:hover {
+    opacity: 90%;
 }
 .item{
     margin: 0 auto;
@@ -51,6 +58,11 @@ img{
     background: white;
     border-radius: 5px;
     grid-area: "item";
+}
+section a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
 }
 section p{
     margin: 10px;
