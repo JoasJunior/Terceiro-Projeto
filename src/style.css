@@ -42,7 +42,7 @@ body {
     font-size: 20px;
 }
 .menu a:hover {
-    color: white;
+    color: gold;
     transition: 200ms;
 }
 #btn-mobile{
@@ -61,7 +61,8 @@ body {
 /* Grid Css */
 
 .container{
-    margin: 30px;
+    max-width: 1650px;
+    margin: 30px 30px;
     display: grid;
     grid-gap: 20px;
     
@@ -72,12 +73,58 @@ body {
     "item item item item item"
     "footer footer footer footer footer";
 }
+@media (max-width: 1400px) {
+    .container{
+        margin: 20px 30px;
+        grid-template-areas: 
+        "item item item item"
+        "item item item item"
+        "item item item item"
+        "item item item item"
+        "item item item item"
+        "footer footer footer footer";
+    }
+}
+@media (max-width: 800px) {
+    .container{
+        margin: 20px 30px;
+        grid-template-areas: 
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "item item"
+        "footer footer";
+    }
+}
+@media (max-width: 500px) {
+    .container{
+        margin: 20px 30px;
+        grid-template-areas: 
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "footer";
+    }
+}
 img{
     max-width: 100%;
     border-radius: 5px;
     box-shadow: 1px 1px 10px black;
 }
 img:hover {
+    transition: 250ms;
     opacity: 90%;
 }
 .item{
@@ -90,10 +137,12 @@ img:hover {
     grid-area: "item";
 }
 section a{
+    text-align: justify;
     text-transform: uppercase;
+    font-family: 'Gemunu Libre', sans-serif;
     text-decoration: none;
     color: black;
-}
+}   
 section p{
     margin: 10px;
     text-align: center;
@@ -101,7 +150,28 @@ section p{
 }
 section p:hover {
     color: orange;
-    font-size:125%;
+    font-size:101%;
+}
+button {
+    border-radius: 10px;
+    background: #252525;
+    height: 30px;
+    margin: 30px 25%;
+    width: 50%;
+    display: block;
+}
+button a{
+    padding: 10px 30%;
+    color: white;
+}
+button:hover {
+    border: none;
+    background: gold;
+    transition: 500ms;
+}
+button:active {
+    border: none;
+    background: black;
 }
 .footer{
     width: 100%;
